@@ -73,7 +73,7 @@ PepSales_NotificationService/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/notification-service.git
+git clone https://github.com/aryanlikebugs/PepSales_NotificationService.git
 cd PepSales_NotificationService
 ```
 
@@ -94,8 +94,7 @@ Create a `.env` file in the root:
 ```
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/notifications_db
-REDIS_HOST=127.0.0.1
-REDIS_PORT=6379
+REDIS_URL=redis://127.0.0.1:6379
 ```
 
 > ⚠️ Make sure MongoDB and Redis servers are running locally (or update with your remote connection strings).
@@ -192,7 +191,7 @@ node backend/worker.js
 
 1. Start MongoDB and Redis servers.
 2. Start the Express app using `npm run dev`.
-3. In a separate terminal, run the queue worker: `node backend/queues/worker.js`.
+3. In a separate terminal, run the queue worker: `node backend/worker.js`.
 4. Use Postman to test:
 
    - **POST** `http://localhost:5000/api/notifications`
@@ -200,6 +199,15 @@ node backend/worker.js
    - **GET** `http://localhost:5000/api/users/123/notifications`
 
 > You'll see worker logs in the console when jobs are being processed.
+
+---
+
+## 🧪 Postman Collection
+
+You can download and test the API endpoints using this [Postman collection](./PepSales_Notification_API.postman_collection.json).
+
+Import it into Postman and hit **Send** to try the requests locally.
+
 
 ---
 
@@ -216,9 +224,9 @@ node backend/worker.js
 
 ## 👨‍💼 Author
 
-**Aryan**  
+**Aryan Gupta**  
 Engineer | Backend Developer | Learner  
-[GitHub Profile](https://github.com/your-github-username)
+[GitHub Profile](https://github.com/aryanlikebugs)
 
 ---
 

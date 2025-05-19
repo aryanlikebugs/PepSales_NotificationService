@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "c7ba15d5-0e09-4266-93d9-b6ce6cdd7ca3",
+		"name": "notification_service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41964275"
+	},
+	"item": [
+		{
+			"name": "send_notifications",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \"userId\": \"12345\",\r\n  \"type\": \"sms\",\r\n  \"message\": \"BullMQ is working!\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/notifications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_user_notifications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/users/123/notifications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"123",
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
